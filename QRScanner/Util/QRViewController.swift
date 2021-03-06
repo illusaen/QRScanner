@@ -36,7 +36,8 @@ class QRPreviewView: NSView {
 }
 
 class QRViewController: NSViewController {
-    let captureSession = AVCaptureSession()
+    private let captureSession = AVCaptureSession()
+    var delegate: QRViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,9 +88,7 @@ extension QRViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
                 let ciImage = CIImage(cvPixelBuffer: imageBuffer)
                 if let messages = QRScanner.qrDecode(ciImage), messages.count > 0 {
-                    self.toggleSession(false)
-//                    self.delegate?.decoded(messages.joined(separator: ", "))
-                    print(messages)
+                    self.delegate?.decoded(messages.joined(separator: ", "))
                 }
     }
 }
