@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var message: String?
+    @State private var messages: [String] = []
     @State private var isCapturing: Bool = true
     
     var body: some View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
-                QRView(message: $message, isCapturing: $isCapturing)
+                QRView(messages: $messages, isCapturing: $isCapturing)
                 VStack(spacing: 16) {
-                    Text(message ?? "")
-                        .frame(width: geometry.size.width * 0.25 - 16, height: geometry.size.height - 96)
-                        .border(Color.accentColor.opacity(0.2), width: 4)
-                        .background(Color.accentColor.opacity(0.2))
-                        .cornerRadius(4)
-                        .font(.title)
-                    Button(action: { isCapturing.toggle() }) {
+                    QRMessagesView(messages: $messages)
+                    Button(action: {
+                            isCapturing.toggle()
+                        if isCapturing { messages = [] }
+                    }) {
                         Image(isCapturing ? "Stop" : "Start")
                             .renderingMode(.template)
                             .resizable()

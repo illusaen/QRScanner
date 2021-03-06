@@ -88,7 +88,7 @@ extension QRViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
                 let ciImage = CIImage(cvPixelBuffer: imageBuffer)
                 if let messages = QRScanner.qrDecode(ciImage), messages.count > 0 {
-                    self.delegate?.decoded(messages.joined(separator: ", "))
+                    self.delegate?.decoded(messages)
                 }
     }
 }

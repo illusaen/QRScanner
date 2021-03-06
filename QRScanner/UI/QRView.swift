@@ -8,11 +8,11 @@
 import SwiftUI
 
 protocol QRViewControllerDelegate {
-    func decoded(_ message: String)
+    func decoded(_ messages: [String])
 }
 
 struct QRView: NSViewControllerRepresentable {
-    @Binding var message: String?
+    @Binding var messages: [String]
     @Binding var isCapturing: Bool
     
     func makeNSViewController(context: Context) -> QRViewController {
@@ -34,8 +34,8 @@ struct QRView: NSViewControllerRepresentable {
             self.parent = parent
         }
         
-        func decoded(_ message: String) {
-            self.parent.message = message
+        func decoded(_ messages: [String]) {
+            self.parent.messages = messages
             self.parent.isCapturing = false
         }
     }

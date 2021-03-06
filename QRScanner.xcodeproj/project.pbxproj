@@ -14,6 +14,7 @@
 		AD933B5025F40B3200BC4DC0 /* QRDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B4F25F40B3200BC4DC0 /* QRDecoder.swift */; };
 		AD933B5325F40B9500BC4DC0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B5225F40B9500BC4DC0 /* QRView.swift */; };
 		AD933B5D25F4173400BC4DC0 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B5C25F4173400BC4DC0 /* QRViewController.swift */; };
+		AD933B6225F4309300BC4DC0 /* QRMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B6125F4309300BC4DC0 /* QRMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AD933B4F25F40B3200BC4DC0 /* QRDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDecoder.swift; sourceTree = "<group>"; };
 		AD933B5225F40B9500BC4DC0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		AD933B5C25F4173400BC4DC0 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		AD933B6125F4309300BC4DC0 /* QRMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				AD933B4025F40B1900BC4DC0 /* ContentView.swift */,
 				AD933B3E25F40B1900BC4DC0 /* QRScannerApp.swift */,
 				AD933B5225F40B9500BC4DC0 /* QRView.swift */,
+				AD933B6125F4309300BC4DC0 /* QRMessageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD933B5025F40B3200BC4DC0 /* QRDecoder.swift in Sources */,
+				AD933B6225F4309300BC4DC0 /* QRMessageView.swift in Sources */,
 				AD933B5D25F4173400BC4DC0 /* QRViewController.swift in Sources */,
 				AD933B5325F40B9500BC4DC0 /* QRView.swift in Sources */,
 				AD933B4125F40B1900BC4DC0 /* ContentView.swift in Sources */,
