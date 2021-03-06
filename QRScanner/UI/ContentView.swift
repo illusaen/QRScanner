@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var message: String? = ""
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
         QRView()
+        Text(message ?? "")
     }
 }
 

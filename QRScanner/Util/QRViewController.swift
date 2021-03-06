@@ -1,28 +1,14 @@
 //
-//  QRView.swift
+//  QRViewController.swift
 //  QRScanner
 //
 //  Created by Wendy Chen on 3/6/21.
 //
 
-import SwiftUI
+import AppKit
 import AVFoundation
 
-struct QRView: NSViewControllerRepresentable {
-    func makeNSViewController(context: Context) -> QRViewController {
-        let viewController = QRViewController()
-        return viewController
-    }
-    
-    func updateNSViewController(_ nsViewController: QRViewController, context: Context) {
-        
-    }
-    
-    typealias NSViewControllerType = QRViewController
-    
-}
-
-class PreviewView: NSView, CALayerDelegate {
+class QRPreviewView: NSView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.configure()
@@ -35,12 +21,11 @@ class PreviewView: NSView, CALayerDelegate {
     
     func configure() {
         self.wantsLayer = true
+        self.layer?.backgroundColor = .black
     }
     
     override func makeBackingLayer() -> CALayer {
         let layer = AVCaptureVideoPreviewLayer()
-        layer.delegate = self
-        layer.needsDisplayOnBoundsChange = true
         layer.videoGravity = .resizeAspectFill
         return layer
     }
@@ -52,18 +37,19 @@ class PreviewView: NSView, CALayerDelegate {
 
 class QRViewController: NSViewController {
     let captureSession = AVCaptureSession()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.prepare()
-        (self.view as! PreviewView).videoPreviewLayer.session = self.captureSession
+        guard let previewView = self.view as? QRPreviewView else { return }
+        previewView.videoPreviewLayer.session = self.captureSession
         self.toggleSession(true)
         
     }
     
     override func loadView() {
-        self.view = PreviewView()
+        self.view = QRPreviewView()
     }
 }
 

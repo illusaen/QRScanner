@@ -13,6 +13,7 @@
 		AD933B4625F40B1A00BC4DC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD933B4525F40B1A00BC4DC0 /* Preview Assets.xcassets */; };
 		AD933B5025F40B3200BC4DC0 /* QRDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B4F25F40B3200BC4DC0 /* QRDecoder.swift */; };
 		AD933B5325F40B9500BC4DC0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B5225F40B9500BC4DC0 /* QRView.swift */; };
+		AD933B5D25F4173400BC4DC0 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B5C25F4173400BC4DC0 /* QRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		AD933B4825F40B1A00BC4DC0 /* QRScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QRScanner.entitlements; sourceTree = "<group>"; };
 		AD933B4F25F40B3200BC4DC0 /* QRDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDecoder.swift; sourceTree = "<group>"; };
 		AD933B5225F40B9500BC4DC0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		AD933B5C25F4173400BC4DC0 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,12 @@
 		AD933B3D25F40B1900BC4DC0 /* QRScanner */ = {
 			isa = PBXGroup;
 			children = (
-				AD933B3E25F40B1900BC4DC0 /* QRScannerApp.swift */,
-				AD933B4025F40B1900BC4DC0 /* ContentView.swift */,
-				AD933B4F25F40B3200BC4DC0 /* QRDecoder.swift */,
-				AD933B4225F40B1A00BC4DC0 /* Assets.xcassets */,
-				AD933B4725F40B1A00BC4DC0 /* Info.plist */,
 				AD933B4825F40B1A00BC4DC0 /* QRScanner.entitlements */,
+				AD933B4725F40B1A00BC4DC0 /* Info.plist */,
+				AD933B4225F40B1A00BC4DC0 /* Assets.xcassets */,
 				AD933B4425F40B1A00BC4DC0 /* Preview Content */,
-				AD933B5225F40B9500BC4DC0 /* QRView.swift */,
+				AD933B5525F4162000BC4DC0 /* UI */,
+				AD933B5725F4166A00BC4DC0 /* Util */,
 			);
 			path = QRScanner;
 			sourceTree = "<group>";
@@ -75,6 +75,25 @@
 				AD933B4525F40B1A00BC4DC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD933B5525F4162000BC4DC0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AD933B4025F40B1900BC4DC0 /* ContentView.swift */,
+				AD933B3E25F40B1900BC4DC0 /* QRScannerApp.swift */,
+				AD933B5225F40B9500BC4DC0 /* QRView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AD933B5725F4166A00BC4DC0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AD933B4F25F40B3200BC4DC0 /* QRDecoder.swift */,
+				AD933B5C25F4173400BC4DC0 /* QRViewController.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD933B5025F40B3200BC4DC0 /* QRDecoder.swift in Sources */,
+				AD933B5D25F4173400BC4DC0 /* QRViewController.swift in Sources */,
 				AD933B5325F40B9500BC4DC0 /* QRView.swift in Sources */,
 				AD933B4125F40B1900BC4DC0 /* ContentView.swift in Sources */,
 				AD933B3F25F40B1900BC4DC0 /* QRScannerApp.swift in Sources */,
@@ -207,6 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -262,6 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
