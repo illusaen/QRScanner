@@ -12,19 +12,11 @@ struct QRMessagesView: View {
 
     var body: some View {
         List(messages, id: \.self) { message in
-            MessageView(message: message)
+            Link(message, destination: URL(string: message)!)
+                .border(Color.accentColor.opacity(0.2), width: 4)
+                .background(Color.accentColor.opacity(0.2))
+                .cornerRadius(4)
+                .font(.title)
         }
-    }
-}
-
-struct MessageView: View {
-    var message: String
-    
-    var body: some View {
-        Link(message, destination: URL(string: message)!)
-            .border(Color.accentColor.opacity(0.2), width: 4)
-            .background(Color.accentColor.opacity(0.2))
-            .cornerRadius(4)
-            .font(.title)
     }
 }

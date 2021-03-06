@@ -15,6 +15,7 @@
 		AD933B5325F40B9500BC4DC0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B5225F40B9500BC4DC0 /* QRView.swift */; };
 		AD933B5D25F4173400BC4DC0 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B5C25F4173400BC4DC0 /* QRViewController.swift */; };
 		AD933B6225F4309300BC4DC0 /* QRMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B6125F4309300BC4DC0 /* QRMessageView.swift */; };
+		AD933B6525F43EC600BC4DC0 /* ToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD933B6425F43EC600BC4DC0 /* ToggleButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AD933B5225F40B9500BC4DC0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		AD933B5C25F4173400BC4DC0 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		AD933B6125F4309300BC4DC0 /* QRMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMessageView.swift; sourceTree = "<group>"; };
+		AD933B6425F43EC600BC4DC0 /* ToggleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				AD933B3E25F40B1900BC4DC0 /* QRScannerApp.swift */,
 				AD933B5225F40B9500BC4DC0 /* QRView.swift */,
 				AD933B6125F4309300BC4DC0 /* QRMessageView.swift */,
+				AD933B6425F43EC600BC4DC0 /* ToggleButtonView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				AD933B5025F40B3200BC4DC0 /* QRDecoder.swift in Sources */,
 				AD933B6225F4309300BC4DC0 /* QRMessageView.swift in Sources */,
 				AD933B5D25F4173400BC4DC0 /* QRViewController.swift in Sources */,
+				AD933B6525F43EC600BC4DC0 /* ToggleButtonView.swift in Sources */,
 				AD933B5325F40B9500BC4DC0 /* QRView.swift in Sources */,
 				AD933B4125F40B1900BC4DC0 /* ContentView.swift in Sources */,
 				AD933B3F25F40B1900BC4DC0 /* QRScannerApp.swift in Sources */,
