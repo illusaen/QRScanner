@@ -12,9 +12,12 @@ struct ContentView: View {
     @State private var isCapturing: Bool = true
     
     var body: some View {
-        VStack {
-            QRView(messages: $messages, isCapturing: $isCapturing)
-                .overlay(ToggleButtonView(messages: $messages, isCapturing: $isCapturing), alignment: .bottomTrailing)
+        ZStack(alignment: .center) {
+            ZStack(alignment: .bottomTrailing) {
+                QRView(messages: $messages, isCapturing: $isCapturing)
+                ToggleButtonView(messages: $messages, isCapturing: $isCapturing)
+            }
+
             QRMessagesView(messages: $messages)
         }
     }

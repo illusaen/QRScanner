@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-let ICON_SIZE: CGFloat = 32
-let BUTTON_SIZE: CGFloat = 64
-let STROKE_WIDTH: CGFloat = 4
+fileprivate let ICON_SIZE: CGFloat = 32
+fileprivate let BUTTON_SIZE: CGFloat = 64
+fileprivate let STROKE_WIDTH: CGFloat = 4
 
 struct ToggleButtonView: View {
     @Binding var messages: [String]
@@ -20,23 +20,21 @@ struct ToggleButtonView: View {
     }
     
     var body: some View {
-        ZStack {
-            Button(action: {
-                isCapturing.toggle()
-                if isCapturing { messages = [] }
-            }) {
-                Icon(isCapturing: isCapturing)
-                    .stroke(color, style: StrokeStyle(lineWidth: STROKE_WIDTH, lineCap: .round, lineJoin: .round))
-                    .frame(width: ICON_SIZE, height: ICON_SIZE, alignment: .center)
-            }
-            .frame(width: BUTTON_SIZE, height: BUTTON_SIZE)
-            .background(Color.black.opacity(0.5))
-            .clipShape(Circle())
-            .overlay(Circle().stroke(color, lineWidth: STROKE_WIDTH * 1.5))
-            .shadow(radius: STROKE_WIDTH)
-            .buttonStyle(BorderlessButtonStyle())
-            .padding()
+        Button(action: {
+            isCapturing.toggle()
+            if isCapturing { messages = [] }
+        }) {
+            Icon(isCapturing: isCapturing)
+                .stroke(color, style: StrokeStyle(lineWidth: STROKE_WIDTH, lineCap: .round, lineJoin: .round))
+                .frame(width: ICON_SIZE, height: ICON_SIZE, alignment: .center)
         }
+        .frame(width: BUTTON_SIZE, height: BUTTON_SIZE)
+        .background(Color.black.opacity(0.5))
+        .clipShape(Circle())
+        .overlay(Circle().stroke(color, lineWidth: STROKE_WIDTH * 1.5))
+        .shadow(radius: STROKE_WIDTH)
+        .buttonStyle(BorderlessButtonStyle())
+        .padding()
     }
 }
 
